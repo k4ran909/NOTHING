@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* === Configuration === */
 const CONFIG = {
-    RAZORPAY_KEY: 'rzp_test_YourTestKeyHere', // Replace with your Razorpay Test/Live key
+    RAZORPAY_KEY: (typeof RAZORPAY_CONFIG !== 'undefined' && RAZORPAY_CONFIG.KEY_ID) || 'rzp_test_YourTestKeyHere', // Loaded from js/config.js
     PRODUCT_NAME: 'NOTHING™ — Premium Edition',
     PRODUCT_PRICE: 50, // Base price in INR
     CURRENCY: 'INR',
