@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Nothing — Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>∅</text></svg>">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body class="buy-page">
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-solid" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-symbol">∅</span>
+                <span class="logo-text">BUY NOTHING</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">← Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <div class="checkout-grid">
+                <!-- Order Summary -->
+                <div class="checkout-summary">
+                    <div class="summary-header">
+                        <h2>Order Summary</h2>
+                        <span class="summary-badge">1 Item</span>
+                    </div>
+                    
+                    <div class="summary-product">
+                        <div class="summary-product-visual">
+                            <div class="mini-nothing-box">
+                                <div class="mnb-face mnb-front"><span>∅</span></div>
+                                <div class="mnb-face mnb-back"></div>
+                                <div class="mnb-face mnb-top"></div>
+                                <div class="mnb-face mnb-bottom"></div>
+                                <div class="mnb-face mnb-left"></div>
+                                <div class="mnb-face mnb-right"></div>
+                            </div>
+                        </div>
+                        <div class="summary-product-info">
+                            <h3>NOTHING™</h3>
+                            <p>Premium Edition</p>
+                            <div class="quantity-selector">
+                                <button class="qty-btn" id="qtyMinus">−</button>
+                                <span class="qty-value" id="qtyValue">1</span>
+                                <button class="qty-btn" id="qtyPlus">+</button>
+                            </div>
+                        </div>
+                        <div class="summary-product-price">
+                            <span id="itemPrice">₹50</span>
+                        </div>
+                    </div>
+
+                    <div class="summary-extras">
+                        <label class="extra-option">
+                            <input type="checkbox" id="giftWrap" value="99">
+                            <div class="extra-check"></div>
+                            <div class="extra-info">
+                                <span class="extra-name">🎁 Gift Wrap Nothing</span>
+                                <span class="extra-desc">Wrap nothing in premium gift paper</span>
+                            </div>
+                            <span class="extra-price">+ ₹99</span>
+                        </label>
+                        <label class="extra-option">
+                            <input type="checkbox" id="certificate" value="49" checked>
+                            <div class="extra-check"></div>
+                            <div class="extra-info">
+                                <span class="extra-name">📜 Certificate of Nothingness</span>
+                                <span class="extra-desc">Personalized authenticity certificate</span>
+                            </div>
+                            <span class="extra-price">+ ₹49</span>
+                        </label>
+                        <label class="extra-option">
+                            <input type="checkbox" id="expressVoid" value="149">
+                            <div class="extra-check"></div>
+                            <div class="extra-info">
+                                <span class="extra-name">⚡ Express Void Delivery</span>
+                                <span class="extra-desc">Get nothing even faster (1-2 days)</span>
+                            </div>
+                            <span class="extra-price">+ ₹149</span>
+                        </label>
+                    </div>
+
+                    <div class="summary-breakdown">
+                        <div class="breakdown-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">₹50</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span>Extras</span>
+                            <span id="extrasTotal">₹49</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span>Shipping</span>
+                            <span class="free-tag">FREE (weighs 0g)</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span>GST (18%)</span>
+                            <span id="taxAmount">₹18</span>
+                        </div>
+                        <div class="breakdown-divider"></div>
+                        <div class="breakdown-row breakdown-total">
+                            <span>Total</span>
+                            <span id="totalAmount">₹117</span>
+                        </div>
+                    </div>
+
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            <span>256-bit SSL</span>
+                        </div>
+                        <div class="trust-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span>Secure Payment</span>
+                        </div>
+                        <div class="trust-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span>Razorpay Verified</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checkout Form -->
+                <div class="checkout-form-wrapper">
+                    <h2>Complete Your <span class="gradient-text">Nothing</span> Purchase</h2>
+                    <p class="form-subtitle">Fill in your details to receive your premium nothing.</p>
+
+                    <form id="checkoutForm" class="checkout-form">
+                        <!-- Personal Details -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">
+                                <span class="form-step">1</span>
+                                Personal Details
+                            </h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required placeholder="Your first name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required placeholder="Your last name">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required placeholder="you@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210" pattern="[0-9+\s]{10,15}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Address -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">
+                                <span class="form-step">2</span>
+                                Shipping Address
+                                <span class="form-note">(Where to deliver nothing)</span>
+                            </h3>
+                            <div class="form-group">
+                                <label for="address">Street Address *</label>
+                                <input type="text" id="address" name="address" required placeholder="123 Void Street">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="city" required placeholder="City">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State *</label>
+                                    <select id="state" name="state" required>
+                                        <option value="">Select State</option>
+                                        <option value="AN">Andaman and Nicobar Islands</option>
+                                        <option value="AP">Andhra Pradesh</option>
+                                        <option value="AR">Arunachal Pradesh</option>
+                                        <option value="AS">Assam</option>
+                                        <option value="BR">Bihar</option>
+                                        <option value="CH">Chandigarh</option>
+                                        <option value="CT">Chhattisgarh</option>
+                                        <option value="DL">Delhi</option>
+                                        <option value="GA">Goa</option>
+                                        <option value="GJ">Gujarat</option>
+                                        <option value="HR">Haryana</option>
+                                        <option value="HP">Himachal Pradesh</option>
+                                        <option value="JK">Jammu and Kashmir</option>
+                                        <option value="JH">Jharkhand</option>
+                                        <option value="KA">Karnataka</option>
+                                        <option value="KL">Kerala</option>
+                                        <option value="MP">Madhya Pradesh</option>
+                                        <option value="MH">Maharashtra</option>
+                                        <option value="MN">Manipur</option>
+                                        <option value="ML">Meghalaya</option>
+                                        <option value="MZ">Mizoram</option>
+                                        <option value="NL">Nagaland</option>
+                                        <option value="OR">Odisha</option>
+                                        <option value="PB">Punjab</option>
+                                        <option value="RJ">Rajasthan</option>
+                                        <option value="SK">Sikkim</option>
+                                        <option value="TN">Tamil Nadu</option>
+                                        <option value="TG">Telangana</option>
+                                        <option value="TR">Tripura</option>
+                                        <option value="UP">Uttar Pradesh</option>
+                                        <option value="UT">Uttarakhand</option>
+                                        <option value="WB">West Bengal</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pincode">PIN Code *</label>
+                                    <input type="text" id="pincode" name="pincode" required placeholder="110001" pattern="[0-9]{6}" maxlength="6">
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Country</label>
+                                    <input type="text" id="country" name="country" value="India" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Gift Message -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">
+                                <span class="form-step">3</span>
+                                Special Instructions
+                                <span class="form-note">(Optional)</span>
+                            </h3>
+                            <div class="form-group">
+                                <label for="giftMessage">Gift Message / Note</label>
+                                <textarea id="giftMessage" name="giftMessage" placeholder="Happy Birthday! Here's nothing for you. 🎉" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Payment -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">
+                                <span class="form-step">4</span>
+                                Payment
+                            </h3>
+                            <div class="payment-info">
+                                <div class="payment-razorpay">
+                                    <svg width="120" height="30" viewBox="0 0 120 30">
+                                        <text x="0" y="22" fill="#528ff0" font-family="Space Grotesk, sans-serif" font-size="16" font-weight="700">Razorpay</text>
+                                    </svg>
+                                    <p>You will be redirected to Razorpay's secure payment gateway to complete your purchase. We support UPI, Cards, Net Banking, and Wallets.</p>
+                                </div>
+                                <div class="payment-methods">
+                                    <div class="payment-method">
+                                        <span>💳</span> Cards
+                                    </div>
+                                    <div class="payment-method">
+                                        <span>🏦</span> Net Banking
+                                    </div>
+                                    <div class="payment-method">
+                                        <span>📱</span> UPI
+                                    </div>
+                                    <div class="payment-method">
+                                        <span>👛</span> Wallets
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-terms">
+                            <label class="terms-check">
+                                <input type="checkbox" id="termsAccept" required>
+                                <div class="terms-checkmark"></div>
+                                <span>I understand that I'm buying nothing and I'm completely fine with that. I accept the <a href="#">Terms of Nothing</a>.</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-glow btn-full btn-pay" id="payBtn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            <span>Pay <span id="payAmount">₹117</span> — Get Nothing</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 BUY NOTHING. All rights (and wrongs) reserved. Secure payments by Razorpay.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/payment.js"></script>
+</body>
+</html>

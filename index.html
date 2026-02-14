@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUY NOTHING — The Premium Nothing Experience</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>∅</text></svg>">
+</head>
+<body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-symbol">∅</span>
+                <span class="logo-text">BUY NOTHING</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#product">Product</a>
+                <a href="#features">Features</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#faq">FAQ</a>
+                <a href="buy.html" class="nav-cta">Buy Now — ₹50</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        <div class="hero-content">
+            <div class="badge animate-fade-in">
+                <span class="badge-dot"></span>
+                Limited Edition — Only ∞ left in stock
+            </div>
+            <h1 class="hero-title animate-fade-in-up">
+                <span class="title-line">Introducing</span>
+                <span class="title-main">
+                    <span class="gradient-text">NOTHING</span>
+                </span>
+                <span class="title-sub">The world's first premium nothing.</span>
+            </h1>
+            <p class="hero-desc animate-fade-in-up delay-1">
+                Finally, a product that does exactly what it promises — absolutely nothing. 
+                Crafted with zero materials, zero effort, and infinite ambition.
+            </p>
+            <div class="hero-actions animate-fade-in-up delay-2">
+                <a href="buy.html" class="btn btn-primary btn-glow">
+                    <span>Buy Nothing — ₹50</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#product" class="btn btn-secondary">
+                    <span>Explore Nothing</span>
+                </a>
+            </div>
+            <div class="hero-stats animate-fade-in-up delay-3">
+                <div class="stat">
+                    <span class="stat-num" data-count="10847">0</span>
+                    <span class="stat-label">Happy Owners</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">4.9</span>
+                    <span class="stat-label">Star Rating</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">0g</span>
+                    <span class="stat-label">Weight</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual animate-fade-in-up delay-2">
+            <div class="product-showcase">
+                <div class="showcase-ring ring-1"></div>
+                <div class="showcase-ring ring-2"></div>
+                <div class="showcase-ring ring-3"></div>
+                <div class="showcase-core">
+                    <div class="nothing-box">
+                        <div class="box-face box-front">
+                            <span class="nothing-symbol">∅</span>
+                        </div>
+                        <div class="box-face box-back"></div>
+                        <div class="box-face box-top"></div>
+                        <div class="box-face box-bottom"></div>
+                        <div class="box-face box-left"></div>
+                        <div class="box-face box-right"></div>
+                    </div>
+                </div>
+                <div class="showcase-particles" id="particles"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Banner -->
+    <section class="marquee-section">
+        <div class="marquee">
+            <div class="marquee-content">
+                <span>NOTHING IS EVERYTHING</span>
+                <span class="marquee-dot">◆</span>
+                <span>ZERO WASTE GUARANTEED</span>
+                <span class="marquee-dot">◆</span>
+                <span>100% SUSTAINABLE</span>
+                <span class="marquee-dot">◆</span>
+                <span>CARBON NEGATIVE</span>
+                <span class="marquee-dot">◆</span>
+                <span>AWARD WINNING</span>
+                <span class="marquee-dot">◆</span>
+                <span>AS SEEN NOWHERE</span>
+                <span class="marquee-dot">◆</span>
+                <span>NOTHING IS EVERYTHING</span>
+                <span class="marquee-dot">◆</span>
+                <span>ZERO WASTE GUARANTEED</span>
+                <span class="marquee-dot">◆</span>
+                <span>100% SUSTAINABLE</span>
+                <span class="marquee-dot">◆</span>
+                <span>CARBON NEGATIVE</span>
+                <span class="marquee-dot">◆</span>
+                <span>AWARD WINNING</span>
+                <span class="marquee-dot">◆</span>
+                <span>AS SEEN NOWHERE</span>
+                <span class="marquee-dot">◆</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="product-section" id="product">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">THE PRODUCT</span>
+                <h2 class="section-title">What is <span class="gradient-text">Nothing</span>?</h2>
+                <p class="section-desc">
+                    Nothing is the revolutionary new product that redefines minimalism. 
+                    It's not just empty — it's purposefully, beautifully, intentionally empty.
+                </p>
+            </div>
+            <div class="product-grid">
+                <div class="product-card card-large">
+                    <div class="card-visual">
+                        <div class="empty-box-visual">
+                            <div class="empty-box-3d">
+                                <div class="eb-face eb-front"></div>
+                                <div class="eb-face eb-back"></div>
+                                <div class="eb-face eb-left"></div>
+                                <div class="eb-face eb-right"></div>
+                                <div class="eb-face eb-top"></div>
+                                <div class="eb-face eb-bottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Premium Packaging</h3>
+                        <p>A beautiful matte-black box with gold foil lettering. Inside? Absolutely nothing. As intended.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3>Zero Assembly</h3>
+                    <p>No instructions needed. No tools required. It's already complete the moment you don't open it.</p>
+                </div>
+                <div class="product-card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Infinite Uses</h3>
+                    <p>Paperweight? Conversation starter? Art piece? Existential statement? It's whatever you want it to be.</p>
+                </div>
+                <div class="product-card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        </svg>
+                    </div>
+                    <h3>Void Certified™</h3>
+                    <p>Each unit undergoes rigorous quality checks to ensure it contains absolutely, positively nothing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">WHY NOTHING?</span>
+                <h2 class="section-title">Features you won't <span class="gradient-text">believe</span></h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item" data-aos>
+                    <div class="feature-number">01</div>
+                    <div class="feature-content">
+                        <h3>Weightless Design</h3>
+                        <p>At precisely 0 grams, Nothing is the lightest product ever made. Your shoulders will thank you.</p>
+                    </div>
+                    <div class="feature-line"></div>
+                </div>
+                <div class="feature-item" data-aos>
+                    <div class="feature-number">02</div>
+                    <div class="feature-content">
+                        <h3>Invisible Technology</h3>
+                        <p>Powered by our proprietary VoidCore™ engine — so advanced, you can't even see it.</p>
+                    </div>
+                    <div class="feature-line"></div>
+                </div>
+                <div class="feature-item" data-aos>
+                    <div class="feature-number">03</div>
+                    <div class="feature-content">
+                        <h3>Eco-Friendly</h3>
+                        <p>Zero carbon footprint. Zero emissions. Zero environmental impact. Mother Nature approves.</p>
+                    </div>
+                    <div class="feature-line"></div>
+                </div>
+                <div class="feature-item" data-aos>
+                    <div class="feature-number">04</div>
+                    <div class="feature-content">
+                        <h3>Unbreakable</h3>
+                        <p>You can't break what doesn't exist. Comes with a lifetime warranty — because it'll never fail.</p>
+                    </div>
+                    <div class="feature-line"></div>
+                </div>
+                <div class="feature-item" data-aos>
+                    <div class="feature-number">05</div>
+                    <div class="feature-content">
+                        <h3>Universal Compatibility</h3>
+                        <p>Works with everything. iOS, Android, Windows, Linux, your fridge — you name it.</p>
+                    </div>
+                    <div class="feature-line"></div>
+                </div>
+                <div class="feature-item" data-aos>
+                    <div class="feature-number">06</div>
+                    <div class="feature-content">
+                        <h3>Silent Operation</h3>
+                        <p>Nothing produces exactly 0 decibels of noise. Perfect for libraries, bedrooms, and the void.</p>
+                    </div>
+                    <div class="feature-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Section -->
+    <section class="price-section">
+        <div class="container">
+            <div class="price-card">
+                <div class="price-glow"></div>
+                <div class="price-content">
+                    <span class="price-tag">SPECIAL LAUNCH PRICE</span>
+                    <div class="price-amount">
+                        <span class="price-currency">₹</span>
+                        <span class="price-value">50</span>
+                    </div>
+                    <p class="price-original">Originally ₹∞ — Save everything!</p>
+                    <ul class="price-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            Premium matte-black void container
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            Certificate of Nothingness
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            Lifetime warranty (nothing to break)
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            Free shipping (it weighs nothing)
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            Exclusive unboxing experience
+                        </li>
+                    </ul>
+                    <a href="buy.html" class="btn btn-primary btn-glow btn-full">
+                        <span>Buy Nothing Now</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <p class="price-note">🔒 Secure payment via Razorpay</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">TESTIMONIALS</span>
+                <h2 class="section-title">What people say about <span class="gradient-text">Nothing</span></h2>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"I've never owned anything like this. Literally. It's nothing. And yet, it's the best purchase I've ever made."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">AK</div>
+                        <div>
+                            <strong>Arjun K.</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"My friends were confused when I showed them nothing. Then they were jealous. Then they all bought one."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">PS</div>
+                        <div>
+                            <strong>Priya S.</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Finally, a company brave enough to sell what every other company actually delivers. Respect."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">RD</div>
+                        <div>
+                            <strong>Rahul D.</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"I bought this as a gift. They opened the box and stared. Then laughed for 20 minutes. Best ₹50 ever spent."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">NM</div>
+                        <div>
+                            <strong>Neha M.</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"As a minimalist, this is the ultimate product. It has transcended beyond minimal. It IS nothing."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">VT</div>
+                        <div>
+                            <strong>Vikram T.</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★☆</div>
+                    <p class="review-text">"One star deducted because I was hoping for even less. But still, pretty close to perfection."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">SK</div>
+                        <div>
+                            <strong>Sneha K.</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What exactly am I buying?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nothing. Literally nothing. You're buying a beautifully designed premium box that contains the purest form of nothing known to humankind. It's a statement piece, a conversation starter, and a philosophical experience all in one.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is the box empty?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The box isn't empty — it's full of nothing. There's a difference. Empty implies something is missing. Nothing means everything is exactly as it should be. Deep, right?</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I return Nothing?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can try, but what are you returning? Nothing. And nothing is exactly what you'll get back. Our return policy is as clear as our product — transparent.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Why does Nothing cost ₹50?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Because free nothing is just... nothing. But ₹50 nothing? That's premium nothing. That's curated, artisanal, hand-crafted nothing. You're paying for the experience, the box, the certificate, and the pure joy of owning nothing.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long does shipping take?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>3-5 business days. We could deliver it instantly since it's nothing, but we wanted you to experience the anticipation. The waiting is part of the premium experience.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is this a joke?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Is art a joke? Is philosophy a joke? Is the universe a joke? We'll let you decide. But your smile when you open the box? That's real. And isn't that worth something?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to own <span class="gradient-text">Nothing</span>?</h2>
+                <p class="cta-desc">Join 10,000+ proud owners of absolutely nothing. Your void awaits.</p>
+                <a href="buy.html" class="btn btn-primary btn-glow btn-large">
+                    <span>Buy Nothing — ₹50</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-symbol">∅</span>
+                        <span class="logo-text">BUY NOTHING</span>
+                    </a>
+                    <p>The world's first premium nothing. Made with zero love, zero effort, and infinite irony.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <a href="#product">Product</a>
+                    <a href="#features">Features</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal (Void)</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Nothing</a>
+                    <a href="#">Refund Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <a href="#">Twitter/X</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Discord</a>
+                    <a href="#">Email</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BUY NOTHING. All rights (and wrongs) reserved. Nothing is a registered trademark of Nothing Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
